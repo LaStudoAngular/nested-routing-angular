@@ -5,7 +5,7 @@
       class="link"
       [routerLink]="['', { outlets: { details: ['photo', photo.id] } }]"
     >
-      <img [src]="photo.thumbnailUrl" alt="" width="60" />
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" width="120" />
     </a>
   </li>
   }

@@ -1,10 +1,10 @@
 <ul class="users">
   @for (user of users$ | async; track user.id) {
-  <li class="user">
-    <a
-      [routerLink]="['', { outlets: { details: ['user', user.id] } }]"
-      class="link primary"
-    >
+  <li
+    [routerLink]="['', { outlets: { details: ['user', user.id] } }]"
+    class="user"
+  >
+    <a class="link primary">
       <h4 class="mat-title">{{ user.name }}</h4>
     </a>
     <p class="mat-caption">{{ user.email }}</p>
