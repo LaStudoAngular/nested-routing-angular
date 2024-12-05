@@ -1,0 +1,30 @@
+<header>
+  <mat-toolbar color="primary">
+    <a
+      mat-stroked-button
+      routerLinkActive="active"
+      routerLink="user"
+      class="nav-link"
+      >Users</a
+    >
+    <a mat-stroked-button routerLinkActive="active" routerLink="photo"
+      >Photos</a
+    >
+  </mat-toolbar>
+</header>
+
+<main class="content">
+  <aside class="sidebar">
+    <router-outlet />
+  </aside>
+  <section class="details">
+    <router-outlet
+      (activate)="isButtonVisible = true"
+      (deactivate)="isButtonVisible = false"
+      name="details"
+    ></router-outlet>
+    @if (isButtonVisible) {
+    <a mat-button [routerLink]="['', { outlets: { details: null } }]">close</a>
+    }
+  </section>
+</main>

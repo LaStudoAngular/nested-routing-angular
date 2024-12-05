@@ -1,0 +1,12 @@
+<ul class="photos">
+  @for (photo of photos$ | async; track photo.id) {
+  <li class="user">
+    <a
+      class="link"
+      [routerLink]="['', { outlets: { details: ['photo', photo.id] } }]"
+    >
+      <img [src]="photo.thumbnailUrl" alt="" width="60" />
+    </a>
+  </li>
+  }
+</ul>

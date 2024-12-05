@@ -1,0 +1,21 @@
+.link {
+    display: block;
+}
+
+.mat-title {
+    margin-bottom: 0;
+}
+
+.users {
+    padding-left: 30px;
+}
+
+.user {
+    display: block;
+    background-color: bisque;
+    padding: 6px 12px;
+
+    &:not(:last-child) {
+        margin-bottom: 6px;
+    }
+}
